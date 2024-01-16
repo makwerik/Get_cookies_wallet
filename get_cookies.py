@@ -61,7 +61,7 @@ class GetCookie:
             EC.presence_of_element_located((
                 By.XPATH, '/html/body/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div/div[1]'))).text
 
-        pickle.dump(self.driver.get_cookies(), open(f"cookies/{name_account.replace('.', '_')}", 'wb'))
+        pickle.dump(self.driver.get_cookies(), open(f"{name_account.replace('.', '_')}", 'wb'))
 
         print(f'Cookie: {name_account} - Save')
 
